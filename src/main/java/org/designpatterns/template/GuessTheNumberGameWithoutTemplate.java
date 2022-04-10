@@ -6,8 +6,9 @@ public class GuessTheNumberGameWithoutTemplate {
     public void play() {
         final int secretNumber = (int) (Math.random() * 101.);
         int guess = -1;
+        Scanner keyboardScanner = new Scanner(System.in);
+
         while (guess != secretNumber) {
-            Scanner keyboardScanner = new Scanner(System.in);
             System.out.println("Enter your guess:");
             guess = keyboardScanner.nextInt();
             if (secretNumber > guess) {
@@ -16,6 +17,7 @@ public class GuessTheNumberGameWithoutTemplate {
                 System.out.println("The secret number is smaller");
             }
         }
+
         System.out.println("You have guessed the secret;)");
     }
 }

@@ -30,5 +30,6 @@ public class GuessTheNumberGame extends Game {
         System.out.println("You have guessed the secret;)");
     }
 
+    @Override
     protected boolean isGameOver() { return guess == secretNumber; }
 }
